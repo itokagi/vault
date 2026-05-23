@@ -2,7 +2,7 @@
 tags:
   - "concept"
 topics:
-  - "kaizen"
+  - "[[kaizen]]"
 status: seed
 created: 2026-05-23
 updated: 2026-05-23
@@ -15,7 +15,7 @@ aliases:
 
 # Kaizen Energy
 
-A model within Personal Kaizen that focuses on the gradual, continuous management of four dimensions of human energy.
+A model within [[personal-kaizen|Personal Kaizen]] that focuses on the gradual, continuous management of four dimensions of human energy.
 
 ## The Four Dimensions
 
@@ -28,12 +28,14 @@ A model within Personal Kaizen that focuses on the gradual, continuous managemen
 
 ## Key Insight
 
-Managing all four dimensions prevents burnout and creates a cumulative effect — a flow state of deep focus, productivity, and satisfaction. Neglecting any one dimension limits the others.
+> [!note] Why all four dimensions matter
+> Managing all four dimensions prevents burnout and creates a cumulative effect — a flow state of deep focus, productivity, and satisfaction. Neglecting any one dimension limits the others.
 
 ## Related
 
-- [[personal-kaizen]]
-- [[kaizen]]
+- [[personal-kaizen|Personal Kaizen]] — the broader framework this model lives within
+- [[kaizen|Kaizen]] — the founding philosophy
+- [[continuous-improvement|Continuous Improvement]] — the principle that drives each dimension forward
 
 ## Source
 

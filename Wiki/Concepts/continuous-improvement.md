@@ -2,7 +2,7 @@
 tags:
   - "concept"
 topics:
-  - "kaizen"
+  - "[[kaizen]]"
 status: seed
 created: 2026-05-23
 updated: 2026-05-23
@@ -15,7 +15,7 @@ aliases:
 
 # Continuous Improvement
 
-The core principle of Kaizen — moving forward consistently, even in small steps, rather than seeking immediate perfection.
+The core principle of [[kaizen|Kaizen]] — moving forward consistently, even in small steps, rather than seeking immediate perfection.
 
 ## How It Works
 
@@ -25,14 +25,19 @@ The core principle of Kaizen — moving forward consistently, even in small step
 
 ## In Practice
 
+> [!tip] Staying consistent
+> - Review your mission daily to realign actions with purpose
+> - Break larger tasks into smaller steps and celebrate small wins to avoid burnout
+> - Establish reinforcement rituals — morning motivation, an inspiring workspace
+
 - Regular self-assessment and periodic goal review
 - Flexibility — adapt the plan as circumstances and priorities change
-- Reinforcement rituals (e.g. reviewing your mission daily, celebrating small wins) to maintain consistency
 
 ## Related
 
-- [[kaizen]]
-- [[personal-kaizen]]
+- [[kaizen|Kaizen]] — the philosophy this principle anchors
+- [[personal-kaizen|Personal Kaizen]] — how this principle is applied individually
+- [[kaizen-energy|Kaizen Energy]] — managing energy as a continuous improvement practice
 
 ## Source
 

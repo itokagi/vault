@@ -24,11 +24,11 @@ A Japanese philosophy of continuous improvement through small, incremental chang
 - **Active participation** — each person commits to the change process
 - **Regular self-assessment** — reflect on progress and adjust the plan as needed
 
-## Related Concepts
+## Related
 
-- [[personal-kaizen]]
-- [[kaizen-energy]]
-- [[continuous-improvement]]
+- [[personal-kaizen|Personal Kaizen]] — applying Kaizen to individual life
+- [[kaizen-energy|Kaizen Energy]] — the four-dimension energy model
+- [[continuous-improvement|Continuous Improvement]] — the core principle in detail
 
 ## Source
 

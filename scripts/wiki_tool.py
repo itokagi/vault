@@ -92,6 +92,23 @@ def relative(path):
     return str(Path(path).relative_to(VAULT_ROOT)).replace("\\", "/")
 
 
+def strip_wikilink(val):
+    """Strip [[...]] or [[...|display]] syntax to plain text."""
+    if isinstance(val, str):
+        match = re.match(r"^\[\[([^\]|]+)(?:\|[^\]]+)?\]\]$", val.strip())
+        return match.group(1) if match else val
+    return val
+
+
+def clean_list(val):
+    """Return a list with wikilink syntax stripped."""
+    if isinstance(val, list):
+        return [strip_wikilink(v) for v in val]
+    if isinstance(val, str):
+        return [strip_wikilink(val)]
+    return []
+
+
 def get_wiki_notes():
     notes = []
     for subfolder in WIKI_SUBFOLDERS:
@@ -119,10 +136,7 @@ def build_coverage_map(wiki_notes):
     for note_path in wiki_notes:
         text = note_path.read_text(encoding="utf-8")
         fm, _ = parse_frontmatter(text)
-        sources = fm.get("sources", [])
-        if isinstance(sources, str):
-            sources = [sources]
-        for src in sources:
+        for src in clean_list(fm.get("sources", [])):
             coverage.setdefault(src, []).append(relative(note_path))
     return coverage
 
@@ -189,15 +203,13 @@ def cmd_build():
         title_match = re.search(r"^#\s+(.+)$", text, re.MULTILINE)
         title = title_match.group(1).strip() if title_match else note_path.stem
 
-        sources = fm.get("sources", [])
-        if isinstance(sources, str):
-            sources = [sources]
+        sources = clean_list(fm.get("sources", []))
 
         catalog_entries.append({
             "path": relative(note_path),
             "title": title,
             "tag": tag,
-            "topics": fm.get("topics", []),
+            "topics": clean_list(fm.get("topics", [])),
             "sources": sources,
             "updated": fm.get("updated", TODAY),
         })
@@ -254,9 +266,7 @@ def cmd_lint():
         elif tags[0] not in ALLOWED_TAGS:
             errors.append(f"{rel}: disallowed tag '{tags[0]}'")
 
-        sources = fm.get("sources", [])
-        if isinstance(sources, str):
-            sources = [sources]
+        sources = clean_list(fm.get("sources", []))
         source_count = fm.get("source_count", None)
         if source_count is not None and source_count != len(sources):
             errors.append(f"{rel}: source_count={source_count} but {len(sources)} source(s) listed")
