@@ -1,6 +1,6 @@
 # Wiki Index
 
-Generated: 2026-05-23 | Notes: 4
+Generated: 2026-05-23 | Notes: 5
 
 ## Topics (1)
 
@@ -18,6 +18,7 @@ Generated: 2026-05-23 | Notes: 4
 ## Projects (0)
 
 
-## Logs (0)
+## Logs (1)
 
+- [[2026-05-23-first-ingest-kaizen]] — First Ingest — Personal Kaizen
 

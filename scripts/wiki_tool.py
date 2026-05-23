@@ -22,7 +22,7 @@ ALLOWED_TAGS = {"topic", "concept", "entity", "project", "log"}
 WIKI_SUBFOLDERS = ["Topics", "Concepts", "Entities", "Projects", "Logs"]
 REQUIRED_SOURCE_FIELDS = {"Title", "Reference", "Created", "Processed", "tags"}
 REQUIRED_WIKI_FIELDS = {"tags", "sources", "source_count", "created", "updated"}
-GENERATED_NAMES = {"index.md", "log.md"}
+GENERATED_NAMES = {"index.md"}
 
 TODAY = _date.today().isoformat()
 
@@ -403,12 +403,18 @@ def cmd_search_catalog(query):
 def cmd_log(title, details):
     entry = f"\n## {TODAY} — {title}\n\n{details}\n"
     if WIKI_LOG_PATH.exists():
-        WIKI_LOG_PATH.write_text(
-            WIKI_LOG_PATH.read_text(encoding="utf-8") + entry, encoding="utf-8"
-        )
+        existing = WIKI_LOG_PATH.read_text(encoding="utf-8")
+        # Update the 'updated' date in frontmatter if present
+        existing = re.sub(r"(^updated:\s*)[\d-]+", f"\\g<1>{TODAY}", existing, flags=re.MULTILINE)
+        WIKI_LOG_PATH.write_text(existing + entry, encoding="utf-8")
     else:
         WIKI_DIR.mkdir(exist_ok=True)
-        WIKI_LOG_PATH.write_text(f"# Wiki Log\n{entry}", encoding="utf-8")
+        frontmatter = (
+            f"---\ntags:\n  - \"log\"\ntopics: []\nstatus: growing\n"
+            f"created: {TODAY}\nupdated: {TODAY}\nsources: []\nsource_count: 0\naliases: []\n---\n\n"
+            f"# Wiki Log\n\nA running record of all ingest sessions and meaningful changes to this vault.\n"
+        )
+        WIKI_LOG_PATH.write_text(frontmatter + entry, encoding="utf-8")
     print(f"log: appended '{title}'")
 
 
