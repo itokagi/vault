@@ -1,0 +1,3 @@
+# Topics
+
+- [[kaizen]] — Kaizen

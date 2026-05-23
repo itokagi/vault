@@ -33,3 +33,7 @@ The core principle of Kaizen — moving forward consistently, even in small step
 
 - [[kaizen]]
 - [[personal-kaizen]]
+
+## Source
+
+- [[Personal Kaizen Transform your life]]

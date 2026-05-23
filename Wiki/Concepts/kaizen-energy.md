@@ -34,3 +34,7 @@ Managing all four dimensions prevents burnout and creates a cumulative effect â€
 
 - [[personal-kaizen]]
 - [[kaizen]]
+
+## Source
+
+- [[Personal Kaizen Transform your life]]

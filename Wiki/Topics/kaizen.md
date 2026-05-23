@@ -29,3 +29,7 @@ A Japanese philosophy of continuous improvement through small, incremental chang
 - [[personal-kaizen]]
 - [[kaizen-energy]]
 - [[continuous-improvement]]
+
+## Source
+
+- [[Personal Kaizen Transform your life]]

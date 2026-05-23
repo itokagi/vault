@@ -41,3 +41,7 @@ The application of the Kaizen philosophy to individual life — a structured str
 - [[kaizen]]
 - [[kaizen-energy]]
 - [[continuous-improvement]]
+
+## Source
+
+- [[Personal Kaizen Transform your life]]
